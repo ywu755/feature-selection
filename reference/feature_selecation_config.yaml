@@ -1,0 +1,40 @@
+#INITIAL SETTINGS
+der: ev
+dataset: input_pge
+samples_frac: 0.1
+feeders:
+  - 12345678912345567891234567891234  
+predictor_cols:
+  - predictor1
+  - predictor2
+  - predictor3
+target_col: adopted
+categorical_cols:
+  - categorical_col1
+  - categorical_col2
+algorithm_type: classification
+estimator: lr
+#TRAIN VALIDATION SPLIT
+test_size: 0.3
+split_random_state: 0
+#FEATURE SELECTION METHOD
+method:
+    rfe:
+      function:
+        determine_num_features:
+          n_splits: 10
+          n_repeats: 3
+          scoring: accuracy
+          random_seed: 5
+        report_rfe_feature_details:
+          n_features: 4
+        test_rfe_across_models:
+          n_features: 4
+          n_splits: 10
+          n_repeats: 3
+          scoring: recall
+          random_seed: 5
+    stepwise:
+      formula: discrete_Logit
+      param: aic
+      verbose: True
