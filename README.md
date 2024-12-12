@@ -12,9 +12,9 @@ and successfully removing features until the desired number remains. For classif
 
 RFE requires two key configuration decisions:
 
-Number of features to select: This determines how many features will be retained.
+- Number of features to select: This determines how many features will be retained.
 Algorithm used for feature selection: This specifies the model used to evaluate and rank feature importance.
 The process involves two main steps:
 
-Determine the optimal number of features to select using RFE.
+- Determine the optimal number of features to select using RFE.
 Explore various algorithms wrapped by RFE to evaluate their performance with the selected features.
