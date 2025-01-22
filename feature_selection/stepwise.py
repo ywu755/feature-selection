@@ -1,3 +1,9 @@
+from typing import List, Optional, Union
+import pandas as pd
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+
+
 def stepwise(
     dataset: pd.DataFrame,
     target: str,
